@@ -1,0 +1,7 @@
+.DS_Store
+.vscode
+*/**/.keep
+.editorconfig
+.elixir_ls/*
+.expo/
+node_modules/*

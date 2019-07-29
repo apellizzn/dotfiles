@@ -7,7 +7,6 @@ export ZSH=/Users/apellizz/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="lambda"
 
-export PATH="$PATH:/usr/local/Cellar/node/7.1.0/bin/"
 export PATH="$PATH:$HOME/Library/Haskell/bin"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,6 +90,8 @@ alias dps="docker ps"
 alias dcp="docker cp"
 alias dex="docker exec -it"
 alias dcomp="docker-compose"
+alias log-casa-staging="python ibox_showlogs.py get amd-a-s --profile=casa-staging"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 eval "$(direnv hook zsh)"
+export PATH="/usr/local/Cellar/node/11.5.0/bin:$PATH"

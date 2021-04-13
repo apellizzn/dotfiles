@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh installation.
+ZSH_DISABLE_COMPFIX=true
 export ZSH=/Users/apellizz/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -7,7 +8,6 @@ export ZSH=/Users/apellizz/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="lambda"
 
-export PATH="$PATH:$HOME/Library/Haskell/bin"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -48,20 +48,22 @@ export PATH="$PATH:$HOME/Library/Haskell/bin"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(rails git bundler osx rake ruby elixir)
+plugins=(git osx)
 # Add wisely, as too many plugins slow down shell startup.
 
 
 # User configuration
 
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+# Java SDKMan
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
-export PGDATA="$HOME/.pg-data"
-export EDITOR="code"
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -75,8 +77,7 @@ export EDITOR="code"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/lightspeed"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -90,8 +91,8 @@ alias dps="docker ps"
 alias dcp="docker cp"
 alias dex="docker exec -it"
 alias dcomp="docker-compose"
-alias log-casa-staging="python ~/Downloads/ibox_showlogs.py get amd-a-s --profile=casa-staging"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-eval "$(direnv hook zsh)"
-export PATH="/usr/local/Cellar/node/11.5.0/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/apellizz/.sdkman"
+[[ -s "/Users/apellizz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/apellizz/.sdkman/bin/sdkman-init.sh"

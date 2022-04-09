@@ -48,9 +48,8 @@ ZSH_THEME="lambda"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(git osx)
+plugins=(git macos)
 # Add wisely, as too many plugins slow down shell startup.
-
 
 # User configuration
 
@@ -58,7 +57,6 @@ plugins=(git osx)
 # Java SDKMan
 
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 [[ -s $(brew --prefix)/etc/autojump.sh ]] && . $(brew --prefix)/etc/autojump.sh
 
@@ -96,3 +94,8 @@ alias dcomp="docker-compose"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/apellizz/.sdkman"
 [[ -s "/Users/apellizz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/apellizz/.sdkman/bin/sdkman-init.sh"
+source /usr/local/opt/asdf/asdf.sh
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+export PATH="/Users/apellizz/Library/Python/3.10/bin/:$PATH"
+export PATH="$(npm config get prefix)/bin:$PATH"
